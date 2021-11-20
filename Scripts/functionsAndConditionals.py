@@ -39,3 +39,20 @@ def temperatureCalc(temperature):
     else:
         return "Cold"
 ##Exercise Elif - Temperature controller##
+
+
+## User Input ##
+user_input = float(input("Enter the temperature:"))
+print (temperatureCalc(user_input))
+## User Input ##
+
+
+
+## String formating ##
+name = input("Enter your name: ")
+surname = input("Enter your surname: ")
+message = "Hello %s %s" % (name, surname)
+print(message)
+message = f"Hello {name} {surname}"
+print(message)
+## String formating ##

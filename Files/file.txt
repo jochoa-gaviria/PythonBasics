@@ -1,0 +1,7 @@
+pear
+apple
+orangepear
+apple
+orangepear
+apple
+orange

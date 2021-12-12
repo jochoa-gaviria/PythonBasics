@@ -84,21 +84,21 @@ for pair in phone_numbers.items():
 
 
 
-## Excersice - Loop over dictionary and format ##
+## Excercise - Loop over dictionary and format ##
 phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
 print('\nExcercise - loop over dictionary and format string')
 for name, phone in phone_numbers.items():
     print("{}: {}".format(name, phone))
     
-## Excersice - Loop over dictionary and format ##
+## Excercise - Loop over dictionary and format ##
 
 
-## Excersice -- Loop over dictionary and replace ##
+## Excercise -- Loop over dictionary and replace ##
 phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
 print('\nExcercise - loop over dictionary and replace')
 for phone in phone_numbers.values():
     print(phone.replace('+', '00'))
-## Excersice -- Loop over dictionary and replace ##
+## Excercise -- Loop over dictionary and replace ##
 
 
 ## While loop example with user input ##

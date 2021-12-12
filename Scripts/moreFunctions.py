@@ -38,21 +38,21 @@ print(mean(1,2,3,4,555,8))
 ## Indefinite number of arguments ##
 
 
-## Excersice - Average function ##
+## Excercise - Average function ##
 def average(*args):
     return sum(args)/len(args)
 
 print(average(87,45,21,33,2,1,4))
-## Excersice - Average function ##
+## Excercise - Average function ##
 
 
-## Excersice - indefinite number of strings ##
+## Excercise - indefinite number of strings ##
 def stringsUpperList(*args):
     args = [x.upper() for x in args] #ListComprehensions
     return sorted(args)
 
 print(stringsUpperList('juan', 'david', 'is', 'learning', 'python'))
-## Excersice - indefinite number of strings ##
+## Excercise - indefinite number of strings ##
 
 
 ## Functions with a indefinite numbers of keywords ##

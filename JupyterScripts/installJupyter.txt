@@ -1,0 +1,5 @@
+in a command line execute the next lines
+
+pip3 install jupyter >> Install jupyter
+python3 -m jupyter notebook >> Execute the application
+

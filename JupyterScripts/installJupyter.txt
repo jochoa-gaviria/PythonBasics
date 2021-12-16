@@ -3,3 +3,6 @@ in a command line execute the next lines
 pip3 install jupyter >> Install jupyter
 python3 -m jupyter notebook >> Execute the application
 
+pip3 install openpyxl >> needed to load Excel .xlsx files
+
+pip3 install xlrd >> needed to load Excel old .xls files

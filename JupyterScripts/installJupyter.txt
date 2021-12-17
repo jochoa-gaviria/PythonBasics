@@ -6,3 +6,5 @@ python3 -m jupyter notebook >> Execute the application
 pip3 install openpyxl >> needed to load Excel .xlsx files
 
 pip3 install xlrd >> needed to load Excel old .xls files
+
+pip3 install geopy >> To help pandas to calculate latitude and longitude

@@ -4,8 +4,8 @@ import os
 import pandas
 
 for i in range(3):
-    if os.path.exists("../Files/fruits.txt"):   ##To check if the file (path) exists.
-        with open("../Files/fruits.txt") as file:
+    if os.path.exists("../Files/supermarkets/fruits.txt"):   ##To check if the file (path) exists.
+        with open("../Files/supermarkets/fruits.txt") as file:
             print(file.read())
             time.sleep(4)
     else:
@@ -23,8 +23,8 @@ for i in range(3):
 ### sudo apt install python3-pip
 
 for i in range(3):
-    if os.path.exists("../Files/temps_today.csv"):   ##To check if the file (path) exists.
-        data = pandas.read_csv("../Files/temps_today.csv")
+    if os.path.exists("../Files/csv/temps_today.csv"):   ##To check if the file (path) exists.
+        data = pandas.read_csv("../Files/csv/temps_today.csv")
         print(data.mean()['st1'])
     else:
         print("File does not exists")

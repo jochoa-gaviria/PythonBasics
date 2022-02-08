@@ -1,5 +1,7 @@
 from tkinter import *
-import backendBookInventory as bi
+from backendBookInventory import Database 
+
+bi=Database()
 
 def getSelectedRow(event):
     try:

@@ -1,6 +1,8 @@
 from lib2to3.pgen2.parse import ParseError
 import os
 
+from pyrsistent import CheckedKeyTypeError
+
 class Account:
     
     def __init__(self, filepath):
@@ -35,9 +37,26 @@ class Account:
         else:
             print("The file was removed.")
 
-account=Account("OOP-Example/files/balance.txt")
-print(account.balance)
-account.withdraw(100)
-print(account.balance)
-account.deposit(50)
-print(account.balance)
+
+# account=Account("OOP-Example/files/balance.txt")
+# print(account.balance)
+# account.withdraw(100)
+# print(account.balance)
+# account.deposit(50)
+# print(account.balance)
+
+
+## Inheritance ##
+class Checking(Account):
+
+    def __init__(self, filepath):
+        Account.__init__(self, filepath) #Inheritance
+
+    def transfer(self, amount):
+        self.balance-=amount
+        self.commit()
+
+checking = Checking("OOP-Example/files/balance.txt")
+checking.transfer(101)
+print(checking.balance)
+## Inheritance ##

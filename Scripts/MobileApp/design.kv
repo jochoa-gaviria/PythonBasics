@@ -1,0 +1,59 @@
+#:kivy 1.0
+<LoginScreen>:
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 1
+            Label:
+                id: "userLogin"
+                text: "User Login"
+            TextInput:
+                hint_text: "Username"
+            TextInput:
+                hint_text: "Password"
+                password: True
+            Button:
+                text: "Login"
+        GridLayout:
+            cols: 2
+            Button:
+                text: "Forgot Password?"
+            Button:
+                text: "Sign Up"
+                on_press: root.signUp()
+
+<SignUpScreen>:
+    GridLayout:
+        cols:1
+        Label:
+            id: "signUp"
+            text: "Sign up for a space journey!!"
+        TextInput:
+            id: username
+            hint_text: "Username"
+        TextInput:
+            id: password
+            hint_text: "Password"
+            password: True
+        Button:
+            text: "Submit"
+            on_press: root.addUser(root.ids.username.text, root.ids.password.text)
+
+<SignUpSucessScreen>:
+    GridLayout:
+        cols: 1
+        Label:
+            id: "signUpSuccess"
+            text: "Sign up successful!!"
+        Button:
+            on_press: root.loginPage()
+            text: "Login page"
+
+
+<RootWidget>:
+    LoginScreen:
+        name: "login_screen"
+    SignUpScreen:
+        name: "signUp_screen"
+    SignUpSucessScreen:
+        name: "SignUpSucess_screen"

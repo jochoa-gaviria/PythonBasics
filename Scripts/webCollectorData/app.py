@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.sql import func
+from sendEmail import sendEmail
 
 app = Flask(__name__, template_folder="template", static_folder="static")
 
@@ -18,6 +20,12 @@ class Data(db.Model):
         self.email_=email_
         self.height_=height_
 
+
+def calculateAverage():
+    average_ = db.session.query(func.avg(Data.height_)).scalar()
+    average_=round(average_,1)
+    return average_
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -31,6 +39,8 @@ def success():
             data=Data(email,height)
             db.session.add(data)
             db.session.commit()
+            averageHeight = calculateAverage()
+            sendEmail(email, height, averageHeight)
             return render_template("success.html")
 
     return render_template("index.html", text="Seems like we've got something from thah email address already!")

@@ -1,8 +1,6 @@
 from email.mime.text import MIMEText
 import smtplib
 
-from cv2 import meanStdDev
-
 
 def sendEmail(email, height, averageHeight):
     fromEmail = "pythont82@gmail.com"

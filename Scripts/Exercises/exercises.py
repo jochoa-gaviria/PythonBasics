@@ -124,3 +124,5 @@ def multipleArgs(*args):
 print(multipleArgs(1,4,5,67,'asss','s'))
 ##Multiple arguments of a function##
 
+
+

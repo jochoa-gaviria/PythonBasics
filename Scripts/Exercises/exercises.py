@@ -4,6 +4,7 @@ Exercises...
 
 """
 ##Counter of a word##
+from curses import noecho
 from operator import contains
 
 
@@ -121,8 +122,30 @@ def firstlastItemList(lista):
 def multipleArgs(*args):
     return [x for x in args]
 
-print(multipleArgs(1,4,5,67,'asss','s'))
+# print(multipleArgs(1,4,5,67,'asss','s'))
 ##Multiple arguments of a function##
 
 
+## Number info ##
+def numberInfo(number):
+    sign=None
+    parity=None
 
+    if number < 0: 
+        sign='negative'
+    elif number == 0:
+        sign='zero'
+    else: 
+        sign='positive'
+
+    if number % 2 == 0:
+        parity = 'even'
+    elif isinstance((number % 2),float):
+        parity = 'non integer'
+    else:
+        parity = 'odd'
+
+    dictionary = {'sign':sign, 'parity':parity}
+    return dictionary
+print(numberInfo(0))
+## Number info ##

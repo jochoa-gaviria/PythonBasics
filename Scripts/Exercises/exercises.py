@@ -147,5 +147,38 @@ def numberInfo(number):
 
     dictionary = {'sign':sign, 'parity':parity}
     return dictionary
-print(numberInfo(0))
+# print(numberInfo(0))
 ## Number info ##
+
+
+## Sum of dictionary of list ##
+def sumDictList(mydict):
+    values = mydict.values()
+    result=0
+    for i in values:
+        result+=sum(i)
+    return (result)
+# print(sumDictList({'a': [1,2], 'b':[3,4]}))
+## Sum of dictionary of list ##
+
+
+## filter Dictionary ##
+def filterDict(mydict):
+    newDict = {}
+    for i in range(len(mydict)):
+        if i % 2 == 0 and list(mydict.values())[i] > 4:
+            newDict[f"{list(mydict.keys())[i]}"]=list(mydict.values())[i]
+    return newDict
+
+# print(filterDict({'a':5,'b':3, 'c':10}))
+
+## filter Dictionary ##
+
+
+## filter Dictionary double ##
+def filterDictD(mydict):
+    return dict((key,value) for key, value in mydict.items() if value > 4 and isinstance(value, int))
+
+print(filterDictD({'a':5,'b':3, 'c':10.1}))
+
+## filter Dictionary double ##
